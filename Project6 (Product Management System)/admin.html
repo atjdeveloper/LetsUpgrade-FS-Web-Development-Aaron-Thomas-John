@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMS</title>
+    <link rel="stylesheet" href="./css/admin.css"/>
+</head>
+<body>
+     <div class="add_modal" id="add_modal" onclick="toggleAddModal(event,true)">
+         <div class="modal_container">
+             <div class="modal_head">
+                 <h2>Add Product</h2>
+                 <button class="add_modal_close" onclick="toggleAddModal(event,false)">&#10006;</button>
+             </div>
+             <form id="add_form" class="modal_form">
+                
+                 <input type="text" placeholder="Name" id="add_name"/>
+                 <input type="text" placeholder="Category" id="add_category" />
+                 <input type="text" placeholder="Price" id="add_price" />
+                 <input type="text" style="width:50%" placeholder="Image URL" id="add_image"/>
+                 <input type="color" style="width:44%;padding:0px;height:35px;" id="add_color"/>
+                 <input type="text" style="width:100%" placeholder="Side Image URL separated by ," id="add_sideImage"/>
+             </form>
+             <div class="modal_submit">
+                 <button type="button" onclick="addProduct()">Submit</button>
+             </div>
+         </div>
+     </div>
+
+
+
+     <div class="update_modal" id="update_modal" onclick="toggleUpdateModal(event,true,index=null)">
+        <div class="modal_container">
+            <div class="modal_head">
+                <h2>Update Product</h2>
+                <button class="update_modal_close" onclick="toggleUpdateModal(event,false,index=null)">&#10006;</button>
+            </div>
+            <form id="add_form" class="modal_form">
+                <input type="text" placeholder="Name" id="update_name"/>
+                <input type="text" placeholder="Category" id="update_category" />
+                <input type="text" placeholder="Price" id="update_price" />
+                <input type="text" style="width:50%" placeholder="Image URL" id="update_image"/>
+                <input type="color" style="width:44%;padding:0px;height:35px;" id="update_color"/>
+                <input type="text" style="width:100%" placeholder="Side Image URL separated by ," id="update_sideImage"/>
+                
+            </form>
+            <div class="modal_submit">
+                <button  onclick="updateProduct()">Update</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="button">
+        <button onclick="toggleAddModal(event,true)">Add Product</button>
+    </div>
+    <div class="heading">
+        <h2>All Products</h2>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Rating</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+                    <p id="info">No data found, please add data!!!!</p>
+              
+            </tbody>
+        </table>
+    </div>
+
+
+    <script type="text/javascript" src="./js/admin.js"></script>
+</body>
+</html>

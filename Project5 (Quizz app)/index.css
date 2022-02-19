@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0
+}
+
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:rgb(182, 248, 248)
+}
+
+.container{
+    width: 20%;
+    height:100px;
+    /* background-color:red; */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container>button{
+    padding:20px;
+    font-family: 'Segoe UI';
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color:rgb(255, 176, 222);
+    border:2px solid rgb(255, 176, 222);
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 1px grey;;
+}
+
+.container>button:hover{
+    background:none;
+    cursor: pointer;
+
+}
+
+.instruction{
+    width:35%;
+    padding:10px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 10px;
+    display:none;
+    flex-direction: column;
+    box-shadow: 1px 1px 2px 1px grey;
+}
+
+.header{
+    padding:15px;
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    font-weight: 450;
+}
+
+.rules{
+    padding:15px;
+    font-family: 'Segoe UI';
+}
+
+.footer{
+    padding:15px;
+}
+
+.footer>button{
+    padding:10px;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    border-radius:5px;
+    background-color:rgb(255, 176, 222);
+    border:2px solid rgb(255, 176, 222);
+    cursor: pointer;
+
+}
+
+.footer>button:hover{
+    background:none;
+    cursor: pointer;
+}
+
+.question{
+    width:35%;
+    padding:10px;
+    background-color:rgb(248, 248, 248);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 1px 1px 2px 1px grey;
+
+}
+
+.question_header{
+    padding:10px;
+}
+
+.time{
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+    padding-right:10px;
+
+    width:30%;
+    height:40px;
+    background-color:rgb(250, 148, 141);
+    border-radius: 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.time>h4{
+    font-family: 'Segoe UI';
+    font-weight:bold;
+}
+
+.timer{
+    width:30%;
+    background-color:rgb(248, 239, 227);
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    font-family: 'Segoe UI';
+    font-weight:bold;
+
+}
+
+.option{
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    row-gap:15px;
+    font-family: 'Segoe UI';
+    
+
+}
+
+.option>h3{
+    padding-top:15px;
+    padding-bottom:15px;
+    font-family: 'Segoe UI';
+    font-size: 22px;
+
+}
+
+.options{
+    width:90%;
+    padding:10px;
+    background-color:rgb(198, 248, 255);
+    border:2px solid rgb(38, 120, 131);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* .options:hover{
+    padding:12px;
+    font-size:19px;
+    transition:.4s;
+} */
+
+.option_container{
+    height:250px;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    /* background-color:red; */
+}
+
+.question_footer{
+    padding:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-family: 'Segoe UI';
+
+}
+
+.question_footer>button{
+    padding-left: 15px;
+    padding-right:15px;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* padding:10px; */
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    border-radius:5px;
+    background-color:rgb(206, 255, 255);
+    border:2px solid rgb(59, 59, 59);
+    cursor: pointer;
+}
+
+.question_footer>button:hover{
+    background:none;
+    cursor: pointer;
+}
+
+.end{
+    width:25%;
+    padding:10px;
+    background-color:rgb(248, 248, 248);
+    border-radius: 10px;
+    display:none;
+    flex-direction:column;
+    box-shadow: 1px 1px 2px 1px grey;
+}
+
+.end>p{
+    padding:10px;
+    font-family: 'Segoe UI';
+    font-size:20px
+}
+
+.end_footer{
+    padding:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    font-family: 'Segoe UI';
+
+}
+
+.end_footer>button{
+    padding:10px;
+    /* padding:10px; */
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    border-radius:5px;
+    background-color:rgb(206, 255, 255);
+    border:2px solid rgb(63, 63, 63);
+    cursor: pointer;
+}
+
+
+
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    .container{
+        width:30%;
+    }
+    .instruction{
+        width:90%;
+    }
+    .question{
+        width:90%;
+    }
+    .end{
+        width:55%;
+    }
+}

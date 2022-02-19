@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css"/>
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body>
+
+
+    <form class="top_panel" id="top_panel">
+       <div class="input_name">
+           <input type="text" placeholder="Search Name" onkeyup="filter('nameFilter',this.value)"/>
+       </div>
+       <div class="input_number">
+         <input type="number" placeholder="Min Rating" onkeyup="filter('minRatingFilter',this.value)"/>
+         <input type="number" placeholder="Max Rating" onkeyup="filter('maxRatingFilter',this.value)"/>
+
+       </div>
+       <div class="input_number">
+        <input type="number" placeholder="Min Price" onkeyup="filter('minPriceFilter',this.value)"/>
+        <input type="number" placeholder="Max Price" onkeyup="filter('maxPriceFilter',this.value)"/>
+
+       </div>
+       <div class="buttons">
+        <button type="button" onclick="openFilterPanel(false)">&#10006;</button>
+        <button type="button" onclick="clearFilter()">clear</button>
+       </div>
+   
+        
+    </form>
+
+    <div class="modal" id="modal" onclick="closeModal(event)">
+        <div class="products_container">
+           <div class="products_container1">
+               <div class="products_image">
+                   <img src="https://www.cnet.com/a/img/66hyvnK3pKcLTcsxo1KVW4YMpE4=/940x0/2021/01/05/18a3a0c6-c288-4428-a4c6-b670019ed3e9/dell-latitude-9420-3-view.png" id="singlepro-image"/>
+               </div>
+               <div class="side_image" id="side_image">
+                 
+               </div>
+           </div>   
+           <div class="products_container2">
+               <h1 id="singlepro-name">Dell Laptop</h1>
+               <h3 id="singlepro-price">$ 450</h3>
+               <div class="products_rating">
+                <div class="gray-star-rate">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="gold-star-rate" id="gold-star-rate">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+             </div>
+             <p id="noof-rating">( 245 )</p>
+             <h4 id="singlepro-category">Electronics</h4>
+               <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.</p>
+               
+               <button >ADD TO CART</button>
+               <h2>Rate the Product</h2>
+               <div class="user-rating">
+                  <i class="fa-solid fa-star user-rate" onmouseover="userRating(1)" onclick="setRating(1)" onmouseout="clearStar()"></i>
+                  <i class="fa-solid fa-star user-rate" onmouseover="userRating(2)" onclick="setRating(2)" onmouseout="clearStar()"></i>
+                  <i class="fa-solid fa-star user-rate" onmouseover="userRating(3)" onclick="setRating(3)" onmouseout="clearStar()"></i>
+                  <i class="fa-solid fa-star user-rate" onmouseover="userRating(4)" onclick="setRating(4)" onmouseout="clearStar()"></i>
+                  <i class="fa-solid fa-star user-rate" onmouseover="userRating(5)" onclick="setRating(5)" onmouseout="clearStar()"></i>
+               </div>
+        </div>    
+        </div>
+    </div>
+        
+    </div>
+    <div class="nav">
+        <div class="logo">
+            <h2>Smart Wears</h2>
+            <div class="cart">
+              <a href="cart.html">Cart</a>  
+            </div>
+            <div class="hamburger" onclick="openFilterPanel(true)">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+        <div class="header">
+            <div class="heading">
+                <h1>DISCOVER OUR NEW BRANDS</h1>
+                <h3>Designed by ATJ</h3>
+                <p style="font-family:'Segoe UI';color:rgb(243, 97, 97);">If no products found, please go to <span style="font-weight: bold;">/admin.html</span> and add some products.</p>
+            </div>
+           <img src="https://verloop.io/wp-content/uploads/eCommerce-banner.png" />
+        </div>
+        <div class="toast" id="toast">
+                
+        </div>
+        <div class="container" id="container" >
+            
+            
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
