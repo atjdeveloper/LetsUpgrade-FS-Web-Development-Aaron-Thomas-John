@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Project</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Dashboard</h2>
+    </div>    
+    <div class="table">
+        <div class="filters">
+           <input type="text" placeholder="Name" onkeyup="searchFilter(this.value,'nameFilter')"/>
+           <input type="text" placeholder="Company" onkeyup="searchFilter(this.value,'companyNameFilter')"/>
+           <select onchange="searchFilter(this.value,'companyRoleFilter')">
+               <option value="">All Position</option>
+               <option value=".net developer">.Net Developer</option>
+               <option value="c developer">C Developer</option>
+               <option value="java developer">Java Developer</option>
+               <option value="software developer">Software Developer</option>
+           </select>
+           
+        </div>
+        <div class="table_content">
+            <h2>All Users</h2>
+            <div class="table_desc">
+            <table>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>
+                      <span class="arrow" onclick="searchFilter('asc','ageFilter')">&darr;</span>
+                    Age
+                      <span class="arrow" onclick="searchFilter('desc','ageFilter')">&uarr;</span>
+                      <span class="arrow" onclick="searchFilter('','ageFilter')">&#10006;</span>
+                  </th>
+                  <th>Company</th>
+                  <th>Position</th>
+                  <th>Country</th>
+                  <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+               
+                
+            </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+ 
+
+    <script src="./index.js"></script>
+</body>
+</html>

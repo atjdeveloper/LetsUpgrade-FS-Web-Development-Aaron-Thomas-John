@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .container{
+            width:100%;
+            height:500px;
+            background-color:#494f58;
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .road1{
+            width:100%;
+            height:250px;
+            /* background-color:red; */
+            border-bottom: 6px  dashed #fda800;
+            display:flex;
+            align-items: center;
+            
+        }
+
+        .road2{
+            width:100%;
+            height:250px;
+            /* background-color:green; */
+            border-top: 6px  dashed #fda800;
+            display:flex;
+            align-items: center;
+        }
+
+        #car1{
+            width:18%;
+            height:100px;
+            /* background-color:blue; */
+            background-size:cover;
+            background-image: url('./images/car1.png');
+            position:fixed;
+        }
+
+        #car2{
+            width:18%;
+            height:140px;
+            /* background-color:blue; */
+            background-size:cover;
+            background-image: url('./images/car2.png');
+            position:fixed;
+
+        }
+
+        button{
+            margin-top:20px;
+            padding:10px;
+            background-color:rgb(58, 179, 196);
+            border:2px solid rgb(58, 179, 196);
+            font-weight:bold;
+            border-radius:5px;
+        }
+        button:hover{
+            background:none;
+
+        }
+
+        .finishLine{
+            width:5%;
+            height:500px;
+            background:black;
+            background-image: url('./images/finish.jpg');
+        }
+
+        .winner{
+            width:15%;
+            padding:5px;
+            background:rgb(218, 218, 218);
+            position:fixed;
+            display:none;
+            flex-direction: column;
+            align-items:center;
+            justify-content:center;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    
+    <div class="winner" id="winner">
+ 
+    </div>
+    <div id="confetti-wrapper">
+    </div>
+    <div class="container">
+        <div>
+          <div class="road1">
+              <div class="car" id="car1">
+  
+              </div>
+          </div>
+          <div class="road2">
+              <div class="car" id="car2">
+                  
+              </div>
+          </div>
+        </div>
+        <div class="finishLine">
+
+        </div>
+    </div>
+
+    <button type="button" onclick="startRace()">Start Race</button>
+
+    
+    <script>
+
+        let car1Margin=0;
+        let car2Margin=0;
+
+        let car1;
+        let car2;
+
+        function moveCar1(){
+            document.getElementById('car1').style.marginLeft=car1Margin+"px";
+            car1Margin+=Math.floor(Math.random()*10);
+
+            if(car1Margin>1220){
+                cancelAnimationFrame(car1);
+                cancelAnimationFrame(car2);
+                winner('Car 1 Winned','car1')
+
+            }
+            car1=requestAnimationFrame(moveCar1);
+        }
+        
+
+        function moveCar2(){
+            document.getElementById('car2').style.marginLeft=car2Margin+"px";
+            car2Margin+=Math.floor(Math.random()*10);
+            if(car2Margin>1220){
+                cancelAnimationFrame(car1);
+                cancelAnimationFrame(car2);
+                winner('Car 2 Winned','car2')
+
+            }
+            car2=requestAnimationFrame(moveCar2);
+        }
+        
+
+        function startRace(){
+            car1=requestAnimationFrame(moveCar1);
+            car2=requestAnimationFrame(moveCar2);
+        }
+
+        function winner(msg,type){
+            let toast = document.getElementById('winner');
+            if(type=="car1"){
+                toast.style.display="flex";
+                toast.innerHTML=`<span style="font-size:40px;">🏆</span><p style="padding-top:5px;">${msg}</p>`;
+            }
+
+            if(type=="car2"){
+                toast.style.display="flex";
+                toast.innerHTML=`<span style="font-size:40px;">🏆</span><p style="padding-top:5px;">${msg}</p>`;
+            }
+        }
+
+
+
+      
+    </script>
+</body>
+</html>
