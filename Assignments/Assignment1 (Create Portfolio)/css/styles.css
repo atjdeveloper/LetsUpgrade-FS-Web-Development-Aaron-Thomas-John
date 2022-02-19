@@ -1,0 +1,271 @@
+#title{
+	background-color:#ffffff;
+
+}
+
+body{
+	background:#737373;
+}
+
+.image1{	
+	width:100%;
+	position:absolute;
+	
+	
+}
+
+.container-fluid{
+	padding: 0% 0% 15%;
+}
+
+h1{
+	font-family: "Montserrat-Black";
+	font-size: 3.5rem;
+	line-height: 1.5;
+}
+#h2{
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-weight:bold;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+#h22{
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-weight:bold;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+#h3 {
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+
+p{
+color:grey;
+}
+
+.description{
+	font-family:'Segoe UI';
+	padding: 3% 6%;
+	font-size: 3.5rem;
+	color:rgb(45, 45, 71);
+	font-weight: bold;
+	width:100%;
+	
+}
+
+.para1{
+	font-family:'Segoe UI';
+	font-weight: 500;
+	padding: 0 6%;
+	font-size: 14px;
+	color:black;
+	
+}
+
+#about{
+	background-color: #ffffff ;
+	padding-bottom: 70px;
+	
+}
+
+
+.list>li{
+	color:black
+}
+.list>li:first-child{
+	list-style-type: none;
+	font-weight: bold;
+	
+}
+
+#btn1{
+	font-family:Arial, Helvetica, sans-serif;
+width:250px;
+height:50px;
+margin: 5% 2% 2% 5%;
+
+	border: 2px solid black;
+  color:black ;
+  
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Navigation bar */
+.navbar{
+	padding: 0 0 4.5rem;
+}
+.navbar-brand{
+	
+	padding: 3%;
+}
+.navbar>button {
+    border-color: black;
+	
+	background:rgb(105, 175, 221);
+}
+
+.navbar>span>i{
+	color:black;
+}
+
+.navbar-toggler-icon{
+	color:transparent;
+}
+
+.container{
+	padding-top:0px;
+	
+}
+
+#logo {
+	
+	font-size: 2.5rem;
+	
+}
+.nav-item{
+	padding: 0px 18px;
+	
+}
+
+.nav-link{
+	font-size: 1.2rem;
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
+
+
+
+.download-button{
+	margin: 5% 3% 5% 0;
+}
+
+#para{
+	padding-top:20px;
+}
+
+/* about section*/
+
+#about>.container>.row>.card{
+	background: linear-gradient(to right, #f0f0f0, #cbeeff);
+	border:none;
+	box-shadow: 0 1px 3px gray;
+}
+
+.card-header{
+	background: linear-gradient(to right, #f0f0f0, #cbeeff);
+}
+.card-header>h1{
+	font-family: 'Segoe UI';
+	font-weight: bold;
+	color:#0a3d62;
+	
+}
+
+.icon{
+	color:#0a3d62;
+	margin-bottom: 1rem;
+}
+.icon:hover{
+	color:#82ccdd;
+}
+
+
+
+.para2>ul>li{
+	list-style-type: none;
+}
+
+.para2>ul>li:not(:first-child){
+	color:black;
+}
+
+.para2>p{
+	color:black;
+}
+
+.head1{
+	text-align: center;
+}
+
+.head1>h1{
+	font-family:'Segoe UI';
+	color:#0a3d62;
+	font-weight: bold;
+}
+/* Projects*/
+#project{
+	background-color:#ffffff;
+	padding:0px 10px 0px 10px;
+}
+
+#project .card{
+	background: linear-gradient(to right, #f0f0f0, #cbeeff);
+}
+
+
+ @media (max-width: 1028px) {
+	 #title{
+		 text-align:center;
+	 }
+	 .image1{
+		 position:static;
+		 transform: rotate(0);
+		 
+	 }
+	 .para2>p{
+		 text-align: justify;
+	 }
+ }
+ 
+ /* footer */
+ 
+ #cta{
+	background: linear-gradient(to right, #ccc8c8, #a8cbdd);
+	margin-top:50px;
+	 padding:7% 10% 0%;
+	 text-align: center;
+ }
+
+ .contact>h3{
+	font-family:'Segoe UI';
+	color:#0a3d62;
+	font-weight: bold;
+ }
+
+ .contact>input{
+	padding-top: 4px;
+	padding-bottom: 9px;
+	padding-left: 40px;
+	padding-right: 40px;
+	border-radius: 5px;
+	border:none;
+ }
+
+ .contact>button{
+padding-left:60px;
+padding-right: 60px;
+ }
+
+ #footer{
+	 
+	 text-align:center;
+	 padding: 2%; 
+	 background: linear-gradient(to right, #ccc8c8, #a8cbdd);
+ }
+
+ #footer>p{
+	 color:white;
+ }
+
+ #footer>i{
+	 cursor:pointer;
+	 font-size: 20px;
+	 color:#0a3d62;
+ }
+
+ #footer>i:hover{
+	color:#82ccdd;
+ }
+ 

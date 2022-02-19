@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css"/>
+    <title>Top 50 Coins by Market Capitalization</title>
+</head>
+<body>
+
+    <div class="heading">
+      <h2>Top 50 Coins by Market Capitalization</h2>
+    </div>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>RANK</th>
+                    <th>COIN</th>
+                    <th>SYMBOL</th>
+                    <th>MKT CAP</th>
+                    <th>PRICE</th>
+                    <th>24H</th>
+                    <th>24H VOL</th>
+                    <th>ATH</th>
+                    <th>ATL</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+    
+    <script>
+        fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false')
+        .then((response) =>response.json())
+        .then((coins) =>{
+            // console.log(coins)
+            let coinString="";
+
+            coins.forEach((coin,index)=>{
+                const {market_cap_rank,image,name,symbol,market_cap,current_price,price_change_percentage_24h,total_volume,ath,atl} = coin;
+
+                 coinString+=
+                             `
+                             <tr>
+                                <td>${market_cap_rank}</td>
+                                <td style="display:flex;align-items:center;font-weight:bold;"><img src="${image}" style="width:5%;padding-right:10px;"/>  ${name}</td>
+                                <td>${symbol.toUpperCase()}</td>
+                                <td>$${market_cap}</td>
+                                <td>$${current_price}</td>
+                                <td>+${price_change_percentage_24h}%</td>
+                                <td>$${total_volume}</td>
+                                <td>$${ath}</td>
+                                <td>$${atl}</td>
+                                
+                             </tr>
+                             `
+            })
+            document.getElementById('body').innerHTML=coinString;
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    </script>
+</body>
+</html>
